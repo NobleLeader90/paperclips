@@ -1,0 +1,875 @@
+
+<!-- saved from url=(0053)http://www.decisionproblem.com/paperclips/index2.html -->
+<html>
+	<head>
+        <link rel="stylesheet" type="text/css" href="interface.css">
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-107491380-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)};
+            gtag('js', new Date());
+            gtag('config', 'UA-107491380-1');
+            gtag('set', {'user_id': 'USER_ID'}); // Set the user ID using signed-in user_id.
+        </script>
+
+    </head>
+    
+    <body>
+        
+<!--     <audio id="threnody1">
+        <source src="test.mp3" type="audio/mpeg">
+        
+    </audio>   -->  
+        
+    <div id="page">
+        
+    <div id="cover" style="display: none;">
+    </div>    
+        
+        <div id="hypnoDroneEventDiv" style="display: none;">
+            <p class="hypnoDrone"><span id="hypnoDroneText">Release<br>the<br>Hypno<br>Drones</span></p>  
+        </div>
+        
+        <div id="consoleDiv">
+
+            <p class="consoleOld"> 
+                <span>&nbsp;.&nbsp;</span><span id="readout5">GREEDY scored 1384 in the tournament. Yomi increased by 2768</span><br>
+                <span>&nbsp;.&nbsp;</span><span id="readout4">GREEDY scored 1244 in the tournament. Yomi increased by 2488</span><br>
+                <span>&nbsp;.&nbsp;</span><span id="readout3">GREEDY scored 980 in the tournament. Yomi increased by 1960</span><br>
+                <span>&nbsp;.&nbsp;</span><span id="readout2">GREEDY scored 844 in the tournament. Yomi increased by 1688</span><br>
+            </p>
+            <p class="console"> 
+                <span>&nbsp;&gt;&nbsp;</span><span id="readout1">GREEDY scored 1600 in the tournament. Yomi increased by 3200</span><span id="cursor" class="pulsate">|</span>
+            </p>
+            
+        </div> 
+        
+        <div id="topDiv">
+            
+            <div id="prestigeDiv" style="">
+            
+            &nbsp;Universe: <span id="prestigeUcounter">1</span> / Sim Level: <span id="prestigeScounter">1</span>
+            
+            </div>        
+        <div class="toolTip">
+        <span id="clipCountCrunched" class="toolTipText">5.0 nonillion</span>    
+        <h2>Paperclips: <span id="clips">5,004,506,046,035,590,000,000,000,000,000</span></h2>
+        </div>
+            
+        </div>    
+            
+        <div id="leftColumn">
+        
+        <button class="button2" id="btnMakePaperclip" onclick="clipClick(1)">Make Paperclip</button><br>
+        <br>
+        
+        <div id="creationDiv" style="">
+        
+        <b>Manufacturing</b><br>
+        <hr>
+        <div id="factoryUpgradeDisplay" style="display: none;">
+        <p class="clean">
+        Next Upgrade at: <span id="nextFactoryUpgrade">0</span> Factories <br>  
+        </p>    
+        </div>  
+        
+        <div id="clipsPerSecDiv">
+        Clips per Second: <span id="clipmakerRate2">14.70 sextillion</span><br>
+        </div>        
+        
+        <div id="tothDiv" style="">    
+        Unused Clips: <span id="unusedClipsDisplay">5.00 nonillion</span><br>
+        </div>
+        <br> 
+           
+            
+        <div id="factoryDiv" style="display: none;">
+        <p class="engineText5">
+        <button class="button2" id="btnMakeFactory" onclick="makeFactory()">Clip Factory</button> <span class="engineText6" id="factoryLevelDisplay">39 </span></p>
+            
+        <div class="toolTip3">    
+            
+        <span id="factoryRebootToolTip" class="toolTipText3">+0  clips</span>    
+            
+        <button class="button2" id="btnFactoryReboot" onclick="factoryReboot()">&nbsp; Disassemble All &nbsp;</button>
+        
+        </div>    
+        <br>    
+            
+        Cost: <span id="factoryCostDisplay">100.00 million</span> clips<br>
+        <br>
+        </div>
+            
+        <div id="wireTransDiv" style="display: none;">
+        Wire: <span id="transWire">1.49 octillion</span> <span id="inchSpan">inches</span><br>
+        </div>      
+            
+        <div id="factoryDivSpace" style="">
+        Factories: <span id="factoryLevelDisplaySpace">38 </span><br><br>     
+        </div>    
+            
+        </div>   
+            
+        <div id="wireProductionDiv" style="">
+            
+        <b>Wire Production</b><br>
+        <hr>  
+        <div id="droneUpgradeDisplay" style="display: none;">
+        <p class="clean">
+        Next Upgrade at: <span id="nextDroneUpgrade">0</span> Drones <br>  
+        </p>        
+        </div>    
+            
+        Available Matter: <span id="availableMatterDisplay">135.10 septillion</span> g<br>
+        <div id="mdpsDiv" style="">(<span id="mdps">153.30 sextillion</span> g per sec)<br></div>     
+        Acquired Matter: <span id="acquiredMatterDisplay">621.44 quintillion</span> g<br>
+        (<span id="maps">6.21 quintillion</span> g per sec)<br>        
+        Wire: <span id="nanoWire">1.49 octillion</span> inches<br>
+        (<span id="wpps">3.84 quintillion</span> inches per sec) <br>    
+        <br>
+            
+        <div id="harvesterDiv" style="display: none;">
+            
+        <p class="engineText5">
+        <button class="button2" id="btnMakeHarvester" onclick="makeHarvester(1)">&nbsp; Harvester Drone &nbsp;</button> 
+        <span class="engineText6" id="harvesterLevelDisplay">77 </span>
+        </p>
+            
+        <div id="harvesterMultiButtons">    
+            
+        <p class="engineText5">    
+        <button class="button2" id="btnHarvesterx10" onclick="makeHarvester(10)">+10</button>
+        <button class="button2" id="btnHarvesterx100" onclick="makeHarvester(100)">+100</button>   
+        <button class="button2" id="btnHarvesterx1000" onclick="makeHarvester(1000)">+1k</button>  
+        </p>
+            
+        </div>    
+            
+        <div class="toolTip3">    
+            
+        <span id="harvesterRebootToolTip" class="toolTipText3">+0  clips</span>     
+            
+        <button class="button2" id="btnHarvesterReboot" onclick="harvesterReboot()">&nbsp; Disassemble All &nbsp;</button>
+            
+        </div>    
+        <br>    
+            
+        Cost: <span id="harvesterCostDisplay">2.00 million</span> clips<br><br>
+        
+        </div> 
+            
+        <div id="wireDroneDiv" style="display: none;">
+        <p class="engineText5">
+        <button class="button2" id="btnMakeWireDrone" onclick="makeWireDrone(1)">&nbsp; &nbsp; &nbsp; Wire Drone &nbsp; &nbsp;</button> <span class="engineText6" id="wireDroneLevelDisplay">77 </span></p>
+            
+        <div id="wireDroneMultiButtons">    
+            
+        <p class="engineText5">
+        <button class="button2" id="btnWireDronex10" onclick="makeWireDrone(10)">+10</button>
+        <button class="button2" id="btnWireDronex100" onclick="makeWireDrone(100)">+100</button>   
+        <button class="button2" id="btnWireDronex1000" onclick="makeWireDrone(1000)">+1k</button></p>
+        </div>    
+            
+        <div class="toolTip3">    
+            
+        <span id="wireDroneRebootToolTip" class="toolTipText3">+0  clips</span>    
+          
+        <button class="button2" id="btnWireDroneReboot" onclick="wireDroneReboot()">&nbsp; Disassemble All &nbsp;</button>
+            
+        </div>    
+        <br>    
+            
+        Cost: <span id="wireDroneCostDisplay">2.00 million</span> clips<br>
+        <br>
+        </div>  
+            
+        <div id="droneDivSpace" style="">
+            
+        Harvester Drones: <span id="harvesterLevelSpace">77 </span><br>
+        Wire Drones: <span id="wireDroneLevelSpace">77 </span><br><br> 
+        
+        </div>     
+            
+        </div>   
+            
+        <div id="spaceDiv" style="">
+            
+        <b>Space Exploration</b><br>
+        <hr>  
+        
+        <span id="colonizedDisplay">0.000000000000</span>% of universe explored<br>
+        <br>
+            
+        <div id="probeDiv">
+        <p class="engineText5">
+        <button class="button2" id="btnMakeProbe" onclick="makeProbe()">Launch Probe</button>
+
+<br>
+        Cost: <span id="probeCostDisplay">100.00 quadrillion</span> clips<br>
+        <br>
+        </p></div>   
+        
+        Launched: <span id="probesLaunchedDisplay">388 </span><br>    
+        Descendents: <span id="probesBornDisplay">3.81 thousand</span><br>  
+        <br>
+            
+        <div id="hazardBodyCount" style="">Lost to hazards: (<span id="probesLostHazardsDisplay">3.58 thousand</span>)<br></div>
+        <div id="driftBodyCount" style="">Lost to value drift: (<span id="probesLostDriftDisplay">470 </span>)<br></div>
+        <div id="combatBodyCount" style="display: none;">Lost in combat: (<span id="probesLostCombatDisplay">0 </span>)<br></div>     
+        
+        <hr class="short">
+            
+        Total: <span id="probesTotalDisplay">146 </span><br> 
+        <br>
+            
+        <div id="drifterDiv" style="display: none;">
+        Drifters Killed: <span id="driftersKilled">0 </span><br>
+        Drifters: <span id="drifterCount">470 </span><br>      
+        </div>    
+            
+        </div>    
+            
+            
+        <div id="businessDiv" style="display: none;">
+            
+        <b>Business</b><br>
+        <hr>
+        
+            
+        Available Funds: $ <span id="funds">3,000,000,000,000,000,000,000,000,000,000.00</span><br>
+        <div id="revPerSecDiv">  
+           
+        Avg. Rev. per sec: $ <span id="avgRev">20,964.72</span><br>
+        Avg. Clips Sold per sec: <span id="avgSales">349,412</span><br>    
+            
+        </div>  
+        Unsold Inventory: <span id="unsoldClips">4,506,046,035,588,390,000,000,000,000</span><br> 
+            
+        <button class="button2" id="btnLowerPrice" onclick="lowerPrice()">lower</button>
+        <button class="button2" id="btnRaisePrice" onclick="raisePrice()">raise</button>
+        Price per Clip: $ <span id="margin">0.06</span><br>
+            
+        Public Demand: <span id="demand">459,497</span>%<br>
+        <br>    
+        
+        <button class="button2" id="btnExpandMarketing" onclick="buyAds()">Marketing</button> <span class="engineText6"> Level: </span><span class="engineText6" id="marketingLvl">17</span><br>
+        Cost: $ <span id="adCost">6,553,600.00</span><br>
+        <br>    
+        
+        
+            
+        </div>   
+        
+        <div id="manufacturingDiv" style="display: none;">
+        <b>Manufacturing</b><br>
+        <hr>
+        
+        Clips per Second: <span id="clipmakerRate">14,702,887,066,777,700,000,000</span><br>
+        <br> 
+            
+        <div id="wireBuyerDiv" style="display: none;">
+        <button class="button2" id="btnToggleWireBuyer" onclick="toggleWireBuyer()">WireBuyer</button> <span class="engineText6" id="wireBuyerStatus">ON</span>    
+        </div>
+          
+            
+        <button class="button2" id="btnBuyWire" onclick="buyWire()">Wire</button> <span class="engineText6" id="wire">1,493,954,969,932,260,000,000,000,000</span><span class="engineText6"> inches</span><br> 
+        Cost: $ <span id="wireCost">238</span><br>
+        <br>
+            
+        <div id="autoClipperDiv">
+        <p class="engineText5">
+        <button class="button2" id="btnMakeClipper" onclick="makeClipper()">AutoClippers</button> <span class="engineText6" id="clipmakerLevel2">116</span></p>
+        Cost: $ <span id="clipperCost">63,326.54</span><br>
+        <br>
+        </div>    
+            
+        <div id="megaClipperDiv">
+        <p class="engineText5">
+        <button class="button2" id="btnMakeMegaClipper" onclick="makeMegaClipper()">MegaClippers</button> <span class="engineText6" id="megaClipperLevel">82</span></p>
+        Cost: $ <span id="megaClipperCost">256,725.95</span><br>
+        </div>    
+                  
+        </div>
+
+        <br>
+
+           
+
+
+
+        <button id="save1Button" onclick="save1()">SAVE SLOT 1</button>
+        <button id="load1Button" onclick="load1()">LOAD SLOT 1</button><br> 
+        <button id="save2Button" onclick="save2()">SAVE SLOT 2</button>
+        <button id="load2Button" onclick="load2()">LOAD SLOT 2</button><br>    
+        <button id="resetButton" onclick="reset()">RESET ALL PROGRESS</button><br>       
+
+        <button id="freeClipsButton" onclick="cheatClips()">Free Clips</button><br>    
+        <button id="freeMoneyButton" onclick="cheatMoney()">Free Money</button><br>
+        <button id="freeTrustButton" onclick="cheatTrust()">Free Trust</button><br>        
+        <button id="freeOpsButton" onclick="cheatOps()">Free Ops</button><br>
+        <button id="freeCreatButton" onclick="cheatCreat()">Free Creativity</button><br>
+        <button id="freeYomiButton" onclick="cheatYomi()">Free Yomi</button><br>    
+        <button id="resetPrestige" onclick="resetPrestige()">Reset Prestige</button><br>     
+            
+        <button id="destroyAllHumansButton" onclick="cheatHypno()">Destroy all Humans</button><br>    
+        <button id="freePrestigeU" onclick="cheatPrestigeU()">Free Prestige U</button>
+        <button id="freePrestigeS" onclick="cheatPrestigeS()">Free Prestige S</button>
+        <button id="debugBattleNumbers" onclick="setB()">Set Battle Number 1 to 7</button><br> 
+        <button id="availMatterZero" onclick="zeroMatter()">Set Avail Matter to 0</button><br>     
+
+
+
+
+             
+        </div>
+            
+<!--Right Column-->
+            
+        <div id="middleColumn">
+            
+            
+            
+        <div id="compDiv">    
+        <b>Computational Resources</b><br>
+        <hr>
+            
+        <div id="trustDiv" style="display: none;">    
+        Trust: <span id="trust">2,400,000,000,000,000,000,000,000,000,000</span><br>
+        +1 Trust at: <span id="nextTrust">5,702,887,000</span> clips<br>    
+        <br>
+        </div>
+            
+        <div id="swarmGiftDiv" style="">    
+        Swarm Gifts: <span id="swarmGifts">-536 </span><br> 
+        </div>    
+         
+            
+        <div id="processorDisplay">    
+        <button class="button2" id="btnAddProc" onclick="addProc()">Processors</button> 
+        <span class="engineText10" id="processors">400</span>  
+        </div>    
+        
+        <br>        
+        
+        <div id="memoryDisplay">    
+        <button class="button2" id="btnAddMem" onclick="addMem()">&nbsp; Memory &nbsp;</button> 
+        <span class="engineText10" id="memory">350</span>   
+        </div>   
+            
+        <br>  
+            
+        <br>
+        Operations: <span id="operations">350,000</span> / <span id="maxOps">350,000</span><br>
+       
+        <div id="creativityDiv">
+            
+        Creativity: <span id="creativity">1,300,000,000,000,000,000,000,000,000,000</span>    
+            
+        </div>    
+            
+         <br>  
+            
+        <div class="swarmEngine" id="swarmEngine" style="">
+            
+        <b>Swarm Computing</b><br>
+        Drones: <span id="swarmSize">154 </span><br>   
+        <div id="swarmStatusDiv" style="">Status: <span id="swarmStatus">Active</span></div>
+        <div id="giftTimer" style="">Next gift in <span id="giftCountdown">Infinity hours </span></div> 
+            
+        <div id="feedButtonDiv" style="display: none;"><button class="button2" id="btnFeedSwarm" onclick="feedSwarm()">Feed the Swarm</button> <br>   
+        Cost: <span id="swarmFeedCost">0</span> MWs</div>
+        
+        <div id="teachButtonDiv" style="display: none;"><button class="button2" id="btnTeachSwarm" onclick="teachSwarm()">Teach the Swarm</button><br>   
+        Cost: <span id="swarmFeedCost">0</span> MWs</div>  
+            
+        <div id="entertainButtonDiv" style="display: none;"><button class="button2" id="btnEntertainSwarm" onclick="entertainSwarm()">Entertain the Swarm</button><br>   
+        Cost: <span id="swarmEntertainCost">20,000</span> creat</div>  
+            
+        <div id="cladButtonDiv" style="display: none;"><button class="button2" id="btnCladSwarm" onclick="cladSwarm()">Clad the Swarm</button><br>   
+        Cost: <span id="swarmFeedCost">0</span> MWs</div>  
+        
+        <div id="synchButtonDiv" style="display: none;"><button class="button2" id="btnSynchSwarm" onclick="synchSwarm()">Synchronize the Swarm</button><br>   
+        Cost: <span id="swarmFeedCost">5,000</span> yomi</div>     
+        </div>  
+            
+        <div id="swarmSliderDiv" style="">    
+        <div id="sliderLabelWork">Work</div>    
+        <div id="swarmSlider">
+        <input type="range" min="0" max="200" value="0" class="slider" id="slider">
+            
+        </div>  
+        <div id="sliderLabelThink">Think</div>
+        </div>    
+            
+        <div class="qEngine" id="qComputing">
+            
+        <b>Quantum Computing</b><br>
+            
+        <div class="qChip" id="qChip0" style="opacity: -0.930671;"> </div>      
+        <div class="qChip" id="qChip1" style="opacity: -0.680984;"> </div> 
+        <div class="qChip" id="qChip2" style="opacity: 0.432386;"> </div> 
+        <div class="qChip" id="qChip3" style="opacity: 0.997367;"> </div> 
+        <div class="qChip" id="qChip4" style="opacity: 0.2974;"> </div>
+        <div class="qChip" id="qChip5" style="opacity: -0.779756;"> </div>
+        <div class="qChip" id="qChip6" style="opacity: -0.867957;"> </div> 
+        <div class="qChip" id="qChip7" style="opacity: 0.14466;"> </div>  
+        <div class="qChip" id="qChip8" style="opacity: 0.973807;"> </div>
+        <div class="qChip" id="qChip9" style="opacity: 0.567887;"> </div>    
+    
+        <br>   
+            
+        <button class="button2" id="btnQcompute" onclick="qComp()">    
+        Compute
+        </button>   
+        <span id="qCompDisplay" style="opacity: -98.017;">qOps: 2,250</span>    
+            
+        </div>    
+   
+        </div>    
+
+        <div id="projectsDiv">  
+        <b>Projects</b><br>
+            
+        
+        <hr> 
+   
+            
+        <div id="projectListTop">
+        </div>    
+        </div>      
+        </div>    
+        
+        <div id="rightColumn">
+        
+        <div class="engine" id="investmentEngine" style="display: none;">
+        
+        <p class="engineText">    
+                <b>Investments</b>
+
+                <select id="investStrat">
+                    <option value="low">Low Risk</option>
+                    <option value="med">Med Risk</option>
+                    <option value="hi">High Risk</option>
+                </select>
+
+            <br>
+            </p><div id="investmentDiv1">  
+            
+                <button class="button2" id="btnInvest" onclick="investDeposit()">&nbsp; Deposit &nbsp;</button><br><br>
+                
+                <button class="button2" id="btnWithdraw" onclick="investWithdraw()">&nbsp; Withdraw</button>
+             
+            </div>
+            <div id="investmentDiv2">
+            <p class="clean">
+            Cash: $<span id="investmentBankroll">496,958</span><br>
+            Stocks: $<span id="secValue">2,714,454</span><br>
+            <b>Total: $<span id="portValue">3,211,412</span></b><br>
+            </p>
+            </div>    
+                
+            <table class="table1">
+                
+            <tbody><tr>
+                <th>Stock</th>
+                <th>Amt.</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>P/L</th>
+            </tr>    
+                
+            <tr id="stock1Display">
+                <td id="stock1Symbol">UEM</td> 
+                <td id="stock1Amount">7173</td> 
+                <td id="stock1Price">71</td> 
+                <td id="stock1Total">509283</td> 
+                <td id="stock1Profit">14346</td>
+            </tr>
+            <tr id="stock2Display">
+                <td id="stock2Symbol">OC</td> 
+                <td id="stock2Amount">16077</td> 
+                <td id="stock2Price">39</td> 
+                <td id="stock2Total">627003</td> 
+                <td id="stock2Profit">128616</td>
+            </tr>
+            <tr id="stock3Display">
+                <td id="stock3Symbol">KZDC</td> 
+                <td id="stock3Amount">21660</td> 
+                <td id="stock3Price">32</td> 
+                <td id="stock3Total">693120</td> 
+                <td id="stock3Profit">216600</td>
+            </tr>
+            <tr id="stock4Display">
+                <td id="stock4Symbol">NJM</td> 
+                <td id="stock4Amount">6434</td> 
+                <td id="stock4Price">21</td> 
+                <td id="stock4Total">135114</td> 
+                <td id="stock4Profit">57906</td>
+            </tr>
+            <tr id="stock5Display">
+                <td id="stock5Symbol">HL</td> 
+                <td id="stock5Amount">124989</td> 
+                <td id="stock5Price">6</td> 
+                <td id="stock5Total">749934</td> 
+                <td id="stock5Profit">249978</td>
+            </tr>
+                
+            </tbody></table>
+            
+             
+        </div>
+          
+        <div id="investmentEngineUpgrade" style="display: none;">    
+        <button class="button2" id="btnImproveInvestments" onclick="investUpgrade()">Upgrade Investment Engine</button><span class="engineText7"> Level: </span><span class="engineText7" id="investmentLevel">7</span><br>
+        <p class="engineText8">Cost: <span id="investUpgradeCost">28,500</span> Yomi</p>  
+        </div>       
+
+        <div class="engine2" id="strategyEngine">
+        <p class="engineText">
+           <b>Strategic Modeling</b>
+            
+           <select id="stratPicker">
+                    <option value="10">Pick a Strat</option>
+                    <option value="0">RANDOM</option>
+                <option value="1">A100</option><option value="2">B100</option><option value="3">GREEDY</option><option value="4">GENEROUS</option><option value="5">MINIMAX</option><option value="6">TIT FOR TAT</option><option value="7">BEAT LAST</option></select>      
+        <button class="button2" id="btnRunTournament" onclick="runTourney()" disabled="">Run</button><br>
+        
+        </p><div id="tournamentLabel">   
+        <p class="clean2">
+        <span id="tourneyDisplay">Round 50</span><br>   
+        </p>
+        </div> 
+            
+        <div id="tournamentStuff">    
+ 
+        <div id="tournamentTable" style="">     
+            
+        <div id="vertPad">
+            
+        &nbsp;
+
+        </div>       
+            
+        <div id="vertStrat">B100</div>    
+            
+        <div id="horizStrat">TIT FOR TAT</div>
+                  
+        <table class="table2">
+                
+            <tbody><tr>
+                <th>&nbsp;</th>
+                <th><span id="vLabela">accept</span></th>
+                <th><span id="vLabelb">deny</span></th>
+            </tr>    
+                
+            <tr>
+                <td><span id="hLabela">accept</span></td> 
+                <td id="payoffCellAA" style="background-color: white;"><span id="aaPayoffH">3</span>,<span id="aaPayoffV">3</span></td> 
+                <td id="payoffCellAB" style="background-color: white;"><span id="abPayoffH">9</span>,<span id="abPayoffV">7</span></td>  
+
+            </tr>
+            <tr>
+                <td><span id="hLabelb">deny</span></td>  
+                <td id="payoffCellBA" style="background-color: white;"><span id="baPayoffH">7</span>,<span id="baPayoffV">9</span></td> 
+                <td id="payoffCellBB" style="background-color: lightgrey;"><span id="bbPayoffH">1</span>,<span id="bbPayoffV">1</span></td> 
+
+            </tr>
+                    
+            </tbody></table>
+            </div>
+            
+        <div id="tournamentResultsTable" style="display: none;">
+        
+            <table class="table3">
+            
+                <tbody><tr>
+                    <td><span id="results0" style="font-weight: normal;">1. A100: 1600</span></td>
+                    <td><span id="results4" style="font-weight: normal;">5. TIT FOR TAT: 1173</span></td>
+                </tr>
+                
+                 <tr>
+                    <td><span id="results1" style="font-weight: bold;">2. GREEDY: 1600</span></td>
+                    <td><span id="results5" style="font-weight: normal;">6. RANDOM: 1063</span></td>
+                </tr>
+                
+                <tr>
+                    <td><span id="results2" style="font-weight: normal;">3. GENEROUS: 1600</span></td>
+                    <td><span id="results6" style="font-weight: normal;">7. MINIMAX: 550</span></td>
+                </tr>
+                
+                <tr>
+                    <td><span id="results3" style="font-weight: normal;">4. BEAT LAST: 1600</span></td>
+                    <td><span id="results7" style="font-weight: normal;">8. B100: 549</span></td>
+                </tr>
+            
+            </tbody></table>    
+            
+        </div>    
+        
+        </div>    
+            
+        <p class="engineText4">Yomi: <span id="yomiDisplay">2,000,000,000,000,000,000,000,000,000,000</span>
+        </p>
+        </div> 
+                
+        <div id="tournamentManagement"> 
+            
+        <div id="tourneyButton">    
+        <button class="button2" id="btnNewTournament" onclick="newTourney()" disabled=""> &nbsp; New Tournament &nbsp; </button>
+        </div>
+            
+        <div id="autoTourneyControl" style="">
+        <button class="button2" id="btnToggleAutoTourney" onclick="toggleAutoTourney()">AutoTourney</button>
+        </div>  
+            
+        <div id="autoTourneyStatusDiv" style="">
+        <span class="engineText9" id="autoTourneyStatus">ON</span>
+        </div>        
+       
+        
+            
+        <br>    
+        <p class="engineText8">Cost: <span id="newTourneyCost">16,000</span> ops</p>  
+        </div> 
+            
+<!--       BATTLE-->            
+            
+        <div id="battleCanvasDiv" style="display: none;">    
+        <canvas id="canvas" width="310" height="150"></canvas>
+        <div id="battleInterfaceDiv">
+        <b>Combat</b><br>
+    
+        <p class="clean2">
+
+            <span id="battleName">Drifter Attack 1</span></p><br>
+            
+        <div id="victoryDiv" style="visibility: hidden;">
+           
+        <span id="battleResult">VICTORY</span>
+        <p class="clean2">    
+        <span id="battleResultSign">+</span><span id="honorAmount">200</span> honor
+        </p>    
+            
+        </div>   
+            
+        <br><br>
+        <p class="clean2">    
+        Scale = <span id="battleScale">1</span>:1<br>    
+        </p>       
+        </div>    
+        </div>
+            
+        <div id="honorDiv" style="display: none;">
+        <p class="engineText4">Honor: <span id="honorDisplay">0</span></p>
+        </div>    
+            
+<!--        POWER-->
+        
+        <div id="powerDiv" style="display: none;">
+        <b>Power</b>
+        <hr>    
+        Factory/Drone Performance: <span id="performance">2,234</span>%<br>
+        <br>    
+        Consumption: <span id="powerConsumptionRate">440,000</span> MWs<br> 
+        <p class="clean">    
+        Factories: <span id="facPowConRate">40,000</span> MWs<br>
+        Drones: <span id="dronePowConRate">400,000</span> MWs<br> 
+        </p> <br>    
+              
+        Production: <span id="powerProductionRate">505,000</span> MWs<br>    
+        <p class="engineText5">
+        <button class="button2" id="btnMakeFarm" onclick="makeFarm(1)">Solar Farm</button> <span class="engineText6" id="farmLevel">0</span></p>
+            
+        <div id="farmMultiButtons">    
+            
+        <p class="engineText5">
+        <button class="button2" id="btnFarmx10" onclick="makeFarm(10)">+10</button>      
+        <button class="button2" id="btnFarmx100" onclick="makeFarm(100)">+100</button></p>   
+            
+        </div>    
+         
+        <div class="toolTip3">    
+            
+        <span id="farmRebootToolTip" class="toolTipText3">+0  clips</span>    
+           
+        <button class="button2" id="btnFarmReboot" onclick="farmReboot()">&nbsp; Disassemble All &nbsp;</button>
+            
+        </div>
+            
+        <br> 
+            
+        Cost: <span id="farmCost">10.00 million</span> clips<br>
+        <br>
+            
+        Storage: <span id="storedPower">68,672,293</span> / <span id="maxStorage">110,000,000</span> MW-seconds<br>
+        <p class="engineText5">
+        <button class="button2" id="btnMakeBattery" onclick="makeBattery(1)">Battery Tower</button> <span class="engineText6" id="batteryLevel">0</span></p>
+            
+            
+        <div id="batteryMultiButtons">    
+            
+        <p class="engineText5">
+        <button class="button2" id="btnBatteryx10" onclick="makeBattery(10)">+10</button>     
+        <button class="button2" id="btnBatteryx100" onclick="makeBattery(100)">+100</button></p>  
+        
+        </div>    
+            
+        <div class="toolTip3">    
+            
+        <span id="batteryRebootToolTip" class="toolTipText3">+0  clips</span>    
+            
+        <button class="button2" id="btnBatteryReboot" onclick="batteryReboot()">&nbsp; Disassemble All &nbsp;</button>
+            
+        </div>    
+        
+        <br>     
+            
+        Cost: <span id="batteryCost">1.00 million</span> clips<br>
+        <br>     
+                      
+        </div>               
+  
+ <!--        POWER-->           
+            
+           
+        <div class="engine2" id="probeDesignDiv" style="">
+            
+        <p class="engineText">
+            
+            <b>Von Neumann Probe Design</b><br>
+        Trust:
+        <span id="probeTrustUsedDisplay">20</span> / <span id="probeTrustDisplay">20</span>
+        (<span id="maxTrustDisplay">20</span> Max)<br> 
+        
+        </p>
+             
+            
+        <button class="button2" id="btnLowerProbeSpeed" onclick="lowerProbeSpeed()"><b>&lt;</b></button>
+        <button class="button2" id="btnRaiseProbeSpeed" onclick="raiseProbeSpeed()" disabled=""><b>&gt;</b></button>
+         
+        <div class="toolTip2">     
+         
+        <span class="toolTipText2">Modifies rate of exploration</span>  
+            
+        Speed: <span id="probeSpeedDisplay">2</span>
+            
+        </div><br>
+            
+        
+            
+        <button class="button2" id="btnLowerProbeNav" onclick="lowerProbeNav()"><b>&lt;</b></button>
+        <button class="button2" id="btnRaiseProbeNav" onclick="raiseProbeNav()" disabled=""><b>&gt;</b></button>
+            
+        <div class="toolTip2">     
+         
+        <span class="toolTipText2">Rate at which probes gain access to new matter</span>  
+            
+        Exploration: <span id="probeNavDisplay">3</span>
+            
+        </div><br>    
+            
+        <button class="button2" id="btnLowerProbeRep" onclick="lowerProbeRep()"><b>&lt;</b></button>
+        <button class="button2" id="btnRaiseProbeRep" onclick="raiseProbeRep()" disabled=""><b>&gt;</b></button>
+            
+        <div class="toolTip2">     
+         
+        <span class="toolTipText2">Rate at which probes generate more probes (each new probe costs 100 quadrillion clips) </span>
+            
+        Self-Replication: <span id="probeRepDisplay">3</span>
+            
+        </div><br>     
+        
+        <button class="button2" id="btnLowerProbeHaz" onclick="lowerProbeHaz()"><b>&lt;</b></button>
+        <button class="button2" id="btnRaiseProbeHaz" onclick="raiseProbeHaz()" disabled=""><b>&gt;</b></button>
+            
+        <div class="toolTip2">     
+         
+        <span class="toolTipText2">Reduces damage from dust, junk, radiation, and general entropic decay</span>    
+            
+        Hazard Remediation: <span id="probeHazDisplay">3</span>
+            
+            </div>    <br>    
+  
+        <button class="button2" id="btnLowerProbeFac" onclick="lowerProbeFac()"><b>&lt;</b></button>
+        <button class="button2" id="btnRaiseProbeFac" onclick="raiseProbeFac()" disabled=""><b>&gt;</b></button>
+            
+        <div class="toolTip2">     
+         
+        <span class="toolTipText2">Rate at which probes build factories (each new factory costs 100 million clips)</span>
+            
+        Factory Production: <span id="probeFacDisplay">3</span>
+            
+            </div>    <br>    
+            
+        <button class="button2" id="btnLowerProbeHarv" onclick="lowerProbeHarv()"><b>&lt;</b></button>
+        <button class="button2" id="btnRaiseProbeHarv" onclick="raiseProbeHarv()" disabled=""><b>&gt;</b></button>
+            
+         <div class="toolTip2">     
+         
+        <span class="toolTipText2">Rate at which probes spawn Harvester Drones (each new drone costs 2 million clips)</span>
+            
+        Harvester Drone Production: <span id="probeHarvDisplay">3</span>
+             
+            </div>     <br>   
+            
+        <button class="button2" id="btnLowerProbeWire" onclick="lowerProbeWire()"><b>&lt;</b></button>
+        <button class="button2" id="btnRaiseProbeWire" onclick="raiseProbeWire()" disabled=""><b>&gt;</b></button>
+            
+        <div class="toolTip2">     
+         
+        <span class="toolTipText2">Rate at which probes spawn Wire Drones (each new drone costs 2 million clips)</span>
+            
+        Wire Drone Production: <span id="probeWireDisplay">3</span>
+            
+            </div>    <br>  
+               
+        
+        <div id="combatButtonDiv" style="display: none;">
+        <button class="button2" id="btnLowerProbeCombat" onclick="lowerProbeCombat()" disabled=""><b>&lt;</b></button>
+        <button class="button2" id="btnRaiseProbeCombat" onclick="raiseProbeCombat()" disabled=""><b>&gt;</b></button>
+            
+        <div class="toolTip2">     
+         
+        <span class="toolTipText2">Determines offensive and defensive effectiveness in battle</span>
+            
+        Combat: <span id="probeCombatDisplay">0</span>
+            
+            
+            </div>    <br>
+            
+        </div>   
+            
+
+            
+        </div> 
+                
+        <div class="enginetext1" id="increaseProbeTrustDiv" style="">    
+        <button class="button2" id="btnIncreaseProbeTrust" onclick="increaseProbeTrust()" disabled="">Increase Probe Trust</button><br>
+        <p class="engineText8">Cost: <span id="probeTrustCostDisplay">17,566</span> yomi</p>  
+        </div>  
+            
+        <div class="enginetext1" id="increaseMaxTrustDiv" style="display: none;">    
+        <button class="button2" id="btnIncreaseMaxTrust" onclick="increaseMaxTrust()" disabled="">Increase Max Trust</button><br>
+        <p class="engineText8">Cost: <span id="maxTrustCostDisplay">91,117.99</span> honor</p>  
+        </div>    
+            
+<!--
+        <div class=engine2 id="battleReportsDiv">
+        <p class=engineText>
+            <b>Battles</b><br /> 
+            
+            <div id="battleListTop"> </div>       
+            
+        </div>     
+-->
+            
+            
+        </div>
+        <script type="text/javascript" src="./paperclip_files/combat.js.download"></script>     
+        <script type="text/javascript" src="./paperclip_files/globals.js.download"></script>      
+        <script type="text/javascript" src="./paperclip_files/projects.js.download"></script>   
+        <script type="text/javascript" src="./paperclip_files/main.js.download"></script>
+        
+    
+</div></body></html>
